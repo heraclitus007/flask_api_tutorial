@@ -10,4 +10,6 @@ def home_page():
 @app.route('/market')
 def market_page():
     items = Item.query.all()
+    print(items)
     return render_template('market.html', items=items)
+
